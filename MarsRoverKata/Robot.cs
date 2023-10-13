@@ -1,43 +1,16 @@
-using System;
-using FluentAssertions;
-
 namespace MarsRoverKata
 {
     public class Robot
     {
         public Position Position { get; private set; }
         public Direction Direction { get; private set; }
-        
+
         public Robot(Position initialPosition, Direction direction)
         {
             Position = initialPosition;
             Direction = direction;
         }
 
-        public void Execute(string commands)
-        {
-            var commandy = commands.ToCharArray();
-            foreach (var c in commandy)
-            {
-                var command = Commands.From(c, this);
-                switch (command)
-                {
-                    case ForwardCommand:
-                        MoveForward();
-                        break;
-                    case BackwardCommand:
-                        MoveBackwards();
-                        break;
-                    case LeftCommand:
-                        TurnLeft();
-                        break;
-                    default:
-                        TurnRight();
-                        break;
-                }
-            }
-        }
-        
         public void TurnRight()
         {
             Direction = Direction.East;
