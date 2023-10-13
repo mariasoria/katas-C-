@@ -14,8 +14,7 @@ namespace MarsRoverKata.test
         public void Move_Forward()
         {
             var initialPosition = new Position(0, 0);
-
-            var robot = new Robot(initialPosition, Direction.North);
+            var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("f");
@@ -28,7 +27,7 @@ namespace MarsRoverKata.test
         public void Move_Backwards()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.South);
+            var robot = Robot.Create(initialPosition, Direction.South);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("b");
@@ -41,7 +40,7 @@ namespace MarsRoverKata.test
         public void Rotate_Left()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.North);
+            var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("l");
@@ -54,7 +53,7 @@ namespace MarsRoverKata.test
         public void Rotate_Left2()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.South);
+            var robot = Robot.Create(initialPosition, Direction.South);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("l");
@@ -67,7 +66,7 @@ namespace MarsRoverKata.test
         public void Rotate_Right()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.North);
+            var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("r");
@@ -80,7 +79,7 @@ namespace MarsRoverKata.test
         public void Rotate_Right2()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.South);
+            var robot = Robot.Create(initialPosition, Direction.South);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("r");
@@ -93,7 +92,7 @@ namespace MarsRoverKata.test
         public void Rotate_Right_And_Move_Forward()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.North);
+            var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
         
             remoteControl.Execute("rf");
@@ -106,7 +105,7 @@ namespace MarsRoverKata.test
         public void Rotate_Left_And_Move_Backward()
         {
             var initialPosition = new Position(0, 0);
-            var robot = new Robot(initialPosition, Direction.North);
+            var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
         
             remoteControl.Execute("lb");

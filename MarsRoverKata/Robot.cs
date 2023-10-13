@@ -2,41 +2,39 @@ namespace MarsRoverKata
 {
     public class Robot
     {
-        public Position Position { get; private set; }
-        public Direction Direction { get; private set; }
-        
         public State State { get; private set; }
 
-        public Robot(Position initialPosition, Direction direction)
+        private Robot(State state)
         {
-            Position = initialPosition;
-            Direction = direction;
-            State = CreateState();
-        }
-        
-        // ToDo. Make constructor private and do all the calls to the FactoryMethod
-        private State CreateState()
-        {
-            if (Direction == Direction.South)
-            {
-                return new South(Direction, Position);
-            }
-            if (Direction == Direction.North)
-            {
-                return new North(Direction, Position);
-            }
-            return new North(Direction, Position);
+            State = state;
         }
 
+        public static Robot Create(Position position, Direction direction)
+        {
+            if (direction == Direction.South)
+            {
+                return new Robot(new South(direction, position));
+            }
+            
+            if (direction == Direction.North)
+            {
+                return new Robot(new North(direction, position));
+            }
+            
+            if (direction == Direction.East)
+            {
+                return new Robot(new East(direction, position));
+            }
+            return new Robot(new West(direction, position));
+        }
+        
         public void TurnRight()
         {
-            Direction = Direction.East;
             State = State.TurnRight();
         }
 
         public void TurnLeft()
         {
-            Direction = Direction.West;
             State = State.TurnLeft();
         }
 
