@@ -26,13 +26,13 @@ namespace MarsRoverKata
         public override State TurnRight()
         {
             Direction = Direction.West;
-            return new South(Direction, Position);
+            return new West(Direction, Position);
         }
 
         public override State TurnLeft()
         {
             Direction = Direction.East;
-            return new South(Direction, Position);
+            return new East(Direction, Position);
         }
     }
 }

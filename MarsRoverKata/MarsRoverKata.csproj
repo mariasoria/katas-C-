@@ -67,6 +67,7 @@
         <Compile Include="BackwardCommand.cs" />
         <Compile Include="Command.cs" />
         <Compile Include="Direction.cs" />
+        <Compile Include="East.cs" />
         <Compile Include="ForwardCommand.cs" />
         <Compile Include="LeftCommand.cs" />
         <Compile Include="North.cs" />
@@ -78,12 +79,14 @@
         <Compile Include="South.cs" />
         <Compile Include="State.cs" />
         <Compile Include="test\RobotShould.cs" />
+        <Compile Include="West.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
       <Content Include=".gitignore" />
+      <Content Include="README.md" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

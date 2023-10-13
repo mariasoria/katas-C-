@@ -20,5 +20,15 @@ namespace MarsRoverKata
         {
             return new Position(X, Y - 1);
         }
+
+        public Position IncrementX()
+        {
+            return new Position(X + 1, Y);
+        }
+
+        public Position DecrementX()
+        {
+            return new Position(X - 1, Y);
+        }
     }
 }

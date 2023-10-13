@@ -10,19 +10,6 @@ namespace MarsRoverKata.test
     // turn right (facing south, facing north...)
     public class RobotShould
     {
-        /*
-     * You are given the initial starting point (x,y) of a rover and the direction (N,S,E,W)
-     * it is facing.
-       The rover receives a character array of commands.
-       Implement commands that move the rover forward/backward (f,b).
-       Implement commands that turn the rover left/right (l,r).
-       Implement wrapping at edges. But be careful, planets are spheres.
-       Implement obstacle detection before each move to a new square.
-            If a given sequence of commands encounters an obstacle,
-            the rover moves up to the last possible point,
-            aborts the sequence and reports the obstacle.
-     */
-
         [Fact]
         public void Move_Forward()
         {
@@ -58,10 +45,22 @@ namespace MarsRoverKata.test
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("l");
+            
+            var state = new West(Direction.West, new Position(0, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+        }
+        
+        [Fact]
+        public void Rotate_Left2()
+        {
+            var initialPosition = new Position(0, 0);
+            var robot = new Robot(initialPosition, Direction.South);
+            var remoteControl = new RemoteControl(robot);
 
-            robot.Direction.Should().Be(Direction.West);
-            robot.Position.X.Should().Be(0);
-            robot.Position.Y.Should().Be(0);
+            remoteControl.Execute("l");
+            
+            var state = new East(Direction.East, new Position(0, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
 
         [Fact]
@@ -72,10 +71,22 @@ namespace MarsRoverKata.test
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("r");
+            
+            var state = new East(Direction.East, new Position(0, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+        }
+        
+        [Fact]
+        public void Rotate_Right2()
+        {
+            var initialPosition = new Position(0, 0);
+            var robot = new Robot(initialPosition, Direction.South);
+            var remoteControl = new RemoteControl(robot);
 
-            robot.Direction.Should().Be(Direction.East);
-            robot.Position.X.Should().Be(0);
-            robot.Position.Y.Should().Be(0);
+            remoteControl.Execute("r");
+            
+            var state = new West(Direction.West, new Position(0, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
 
         [Fact]
@@ -84,26 +95,24 @@ namespace MarsRoverKata.test
             var initialPosition = new Position(0, 0);
             var robot = new Robot(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
-
+        
             remoteControl.Execute("rf");
-
-            robot.Direction.Should().Be(Direction.East);
-            robot.Position.X.Should().Be(1);
-            robot.Position.Y.Should().Be(0);
+            
+            var state = new East(Direction.East, new Position(1, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
-
+        
         [Fact]
         public void Rotate_Left_And_Move_Backward()
         {
             var initialPosition = new Position(0, 0);
             var robot = new Robot(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
-
+        
             remoteControl.Execute("lb");
-
-            robot.Direction.Should().Be(Direction.West);
-            robot.Position.X.Should().Be(1);
-            robot.Position.Y.Should().Be(0);
+        
+            var state = new West(Direction.West, new Position(1, 0));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
     }
 }
