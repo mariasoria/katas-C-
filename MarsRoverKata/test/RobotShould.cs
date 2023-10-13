@@ -32,22 +32,22 @@ namespace MarsRoverKata.test
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("f");
-
-            robot.Position.X.Should().Be(0);
-            robot.Position.Y.Should().Be(1);
+            
+            var state = new North(Direction.North, new Position(0, 1));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
 
         [Fact]
         public void Move_Backwards()
         {
-            var initialPosition = new Position(0, 1);
+            var initialPosition = new Position(0, 0);
             var robot = new Robot(initialPosition, Direction.South);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("b");
-
-            robot.Position.X.Should().Be(0);
-            robot.Position.Y.Should().Be(1);
+            
+            var state = new South(Direction.South, new Position(0, 1));
+            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
         }
 
         [Fact]

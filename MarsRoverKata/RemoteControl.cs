@@ -27,5 +27,10 @@ namespace MarsRoverKata
                 command.Execute();
             }
         }
+
+        public State GetRobotState()
+        {
+            return robot.State;
+        }
     }
 }

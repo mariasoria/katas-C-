@@ -4,21 +4,39 @@ namespace MarsRoverKata
     {
         public Position Position { get; private set; }
         public Direction Direction { get; private set; }
+        
+        public State State { get; private set; }
 
         public Robot(Position initialPosition, Direction direction)
         {
             Position = initialPosition;
             Direction = direction;
+            State = CreateState(); // It will start looking to the north
+        }
+
+        private State CreateState()
+        {
+            if (Direction == Direction.South)
+            {
+                return new South(Direction, Position);
+            }
+            if (Direction == Direction.North)
+            {
+                return new North(Direction, Position);
+            }
+            return new North(Direction, Position);
         }
 
         public void TurnRight()
         {
             Direction = Direction.East;
+            State = State.TurnRight();
         }
 
         public void TurnLeft()
         {
             Direction = Direction.West;
+            State = State.TurnLeft();
         }
 
         public void MoveBackwards()
@@ -27,20 +45,21 @@ namespace MarsRoverKata
             // this way we can use the state pattern as well
             // and strategy pattern???
             // check where it is facing and the move
-            if (Direction == Direction.East)
-            {
-                // move east
-                Position = new Position(-1, 0);
-            } else if (Direction == Direction.West)
-            {
-                Position = new Position(1, 0);
-            } else if (Direction == Direction.North)
-            {
-                Position = new Position(0, -1);
-            } else 
-            {
-                Position = new Position(0, 1);
-            }
+            // if (Direction == Direction.East)
+            // {
+            //     // move east
+            //     Position = new Position(-1, 0);
+            // } else if (Direction == Direction.West)
+            // {
+            //     Position = new Position(1, 0);
+            // } else if (Direction == Direction.North)
+            // {
+            //     Position = new Position(0, -1);
+            // } else 
+            // {
+            //     Position = new Position(0, 1);
+            // }
+            State = State.MoveBackwards();
         }
 
         public void MoveForward()
@@ -61,8 +80,7 @@ namespace MarsRoverKata
             {
                 Position = new Position(0, -1);
             }
-            
-            
+            State = State.MoveForward();
         }
     }
     
