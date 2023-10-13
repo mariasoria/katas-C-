@@ -14,26 +14,28 @@ namespace MarsRoverKata.test
         public void Move_Forward()
         {
             var initialPosition = new Position(0, 0);
+            var expectedPosition = new Position(0, 1);
             var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("f");
-            
-            var state = new North(Direction.North, new Position(0, 1));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+
+            var expectedState = new North(Direction.North, expectedPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
 
         [Fact]
         public void Move_Backwards()
         {
             var initialPosition = new Position(0, 0);
+            var expectedPosition = new Position(0, 1);
             var robot = Robot.Create(initialPosition, Direction.South);
             var remoteControl = new RemoteControl(robot);
 
             remoteControl.Execute("b");
-            
-            var state = new South(Direction.South, new Position(0, 1));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+
+            var expectedState = new South(Direction.South, expectedPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
 
         [Fact]
@@ -45,21 +47,8 @@ namespace MarsRoverKata.test
 
             remoteControl.Execute("l");
             
-            var state = new West(Direction.West, new Position(0, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
-        }
-        
-        [Fact]
-        public void Rotate_Left2()
-        {
-            var initialPosition = new Position(0, 0);
-            var robot = Robot.Create(initialPosition, Direction.South);
-            var remoteControl = new RemoteControl(robot);
-
-            remoteControl.Execute("l");
-            
-            var state = new East(Direction.East, new Position(0, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+            var expectedState = new West(Direction.West, initialPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
 
         [Fact]
@@ -71,47 +60,36 @@ namespace MarsRoverKata.test
 
             remoteControl.Execute("r");
             
-            var state = new East(Direction.East, new Position(0, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
-        }
-        
-        [Fact]
-        public void Rotate_Right2()
-        {
-            var initialPosition = new Position(0, 0);
-            var robot = Robot.Create(initialPosition, Direction.South);
-            var remoteControl = new RemoteControl(robot);
-
-            remoteControl.Execute("r");
-            
-            var state = new West(Direction.West, new Position(0, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+            var expectedState = new East(Direction.East, initialPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
 
         [Fact]
         public void Rotate_Right_And_Move_Forward()
         {
             var initialPosition = new Position(0, 0);
+            var expectedPosition = new Position(1, 0);
             var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
         
             remoteControl.Execute("rf");
-            
-            var state = new East(Direction.East, new Position(1, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+
+            var expectedState = new East(Direction.East, expectedPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
         
         [Fact]
         public void Rotate_Left_And_Move_Backward()
         {
             var initialPosition = new Position(0, 0);
+            var expectedPosition = new Position(1, 0);
             var robot = Robot.Create(initialPosition, Direction.North);
             var remoteControl = new RemoteControl(robot);
         
             remoteControl.Execute("lb");
-        
-            var state = new West(Direction.West, new Position(1, 0));
-            remoteControl.GetRobotState().Should().BeEquivalentTo(state);
+
+            var expectedState = new West(Direction.West, expectedPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
     }
 }
