@@ -1,0 +1,9 @@
+.DS_STORE
+.idea/
+
+debug/
+release/
+x64/
+bin/
+obj/
+packages/
