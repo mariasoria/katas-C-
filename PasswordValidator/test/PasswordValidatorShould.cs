@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace PasswordValidator
+namespace PasswordValidator.test
 {
     public class PasswordValidatorShould
     {
