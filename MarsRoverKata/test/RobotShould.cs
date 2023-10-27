@@ -91,5 +91,20 @@ namespace MarsRoverKata.test
             var expectedState = new West(Direction.West, expectedPosition);
             remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
         }
+        
+        
+        [Fact]
+        public void Rotate_Right_And_Move_Backwards_And_Rotate_Right_Move_Backwards()
+        {
+            var initialPosition = new Position(2, 2);
+            var expectedPosition = new Position(3, 3);
+            var robot = Robot.Create(initialPosition, Direction.North);
+            var remoteControl = new RemoteControl(robot);
+
+            remoteControl.Execute("rfrb");
+
+            var expectedState = new South(Direction.South, expectedPosition);
+            remoteControl.GetRobotState().Should().BeEquivalentTo(expectedState);
+        }
     }
 }
