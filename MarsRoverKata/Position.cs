@@ -2,8 +2,8 @@ namespace MarsRoverKata
 {
     public class Position
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        private int X { get; }
+        private int Y { get; }
 
         public Position(int x, int y)
         {
