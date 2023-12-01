@@ -34,5 +34,15 @@ namespace PasswordValidator.test
         {
             PasswordValidator.IsStrongPassword("ABCDabcd").Should().BeFalse();
         }
+
+        [Fact]
+        public void ValidateWeakPasswords()
+        {
+            PasswordValidator.IsStrongPassword("abcdefghij").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("ABCDEFGHIJ").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("1234567890").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("AbcdefGhijKlmnopQRsTuvwxyZ").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("!@#$%^&*()-_+={}[]|\\:;?/>.<,").Should().BeFalse();
+        }
     }
 }
