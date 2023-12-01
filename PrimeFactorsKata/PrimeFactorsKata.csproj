@@ -65,7 +65,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="PrimeFactors.cs" />
-        <Compile Include="PrimeFactorsTests.cs" />
+        <Compile Include="PrimeFactorsShould.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
