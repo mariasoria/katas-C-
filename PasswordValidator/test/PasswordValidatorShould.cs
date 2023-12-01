@@ -9,14 +9,16 @@ namespace PasswordValidator.test
         public void ValidateThatPasswordIsStrongEnough()
         {
             PasswordValidator.IsStrongPassword("Abcd1234").Should().BeTrue();
+            PasswordValidator.IsStrongPassword("AbcdefGhijKlmnopQRsTuvwxyZ1234567890").Should().BeTrue();
+            PasswordValidator.IsStrongPassword("Ab1!@#$%^&*()-_+={}[]|\\:;?/>.<,").Should().BeTrue();
         }
-        
+
         [Fact]
         public void ValidateThatPasswordIsNotLongEnough()
         {
-            PasswordValidator.IsStrongPassword("Ola_k_").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("Abcd123").Should().BeFalse();
         }
-        
+
         [Fact]
         public void ValidateThatPasswordHasNotAnUppercaseLetter()
         {
