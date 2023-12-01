@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverKata", "MarsRoverKata\MarsRoverKata.csproj", "{67CBC463-DD4D-4E79-A6C0-E4CCE27D95AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordValidator", "PasswordValidator\PasswordValidator.csproj", "{4D205787-29D8-491C-A110-80AD8BE69C96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordValidatorKata", "PasswordValidatorKata\PasswordValidatorKata.csproj", "{4D205787-29D8-491C-A110-80AD8BE69C96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpKata", "SignUpKata\SignUpKata.csproj", "{31A18248-49F8-4E4D-8538-7301D58F9E37}"
 EndProject
