@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FindUppercaseKata
 {
-    public static class FindUppercaseKata
+    public static class FindUppercase
     {
         public static List<int> Execute(string text)
         {

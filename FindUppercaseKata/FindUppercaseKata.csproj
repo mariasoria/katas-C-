@@ -58,8 +58,8 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="FindUppercaseKata.cs" />
-        <Compile Include="FindUppercaseKataShould.cs" />
+        <Compile Include="FindUppercase.cs" />
+        <Compile Include="FindUppercaseShould.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
