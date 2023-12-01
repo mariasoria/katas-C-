@@ -28,5 +28,11 @@ namespace PasswordValidator.test
         {
             PasswordValidator.IsStrongPassword("ABCD1234").Should().BeFalse();
         }
+
+        [Fact]
+        public void ValidateThatPasswordHasNotANumber()
+        {
+            PasswordValidator.IsStrongPassword("ABCDabcd").Should().BeFalse();
+        }
     }
 }
