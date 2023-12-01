@@ -6,12 +6,19 @@ namespace PasswordValidator
     {
         public static bool IsStrongPassword(string password)
         {
-            return password.Length > 8 && HasUppercaseLetter(password);
+            return password.Length >= 8
+                   && HasUppercaseLetter(password)
+                   && HasLowercaseLetter(password);
         }
         
         private static bool HasUppercaseLetter(string password)
         {
-            return Regex.IsMatch(password, @"[A-Z]");
+            return Regex.IsMatch(password, "[A-Z]");
+        }
+
+        private static bool HasLowercaseLetter(string password)
+        {
+            return Regex.IsMatch(password, "[a-z]");
         }
     }
 }

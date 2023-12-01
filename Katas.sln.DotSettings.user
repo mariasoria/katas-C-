@@ -1,9 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d32cad38_002Dfc11_002D4503_002D9676_002D5d33e3b3f0a0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RobotShould #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::67CBC463-DD4D-4E79-A6C0-E4CCE27D95AA::.NETFramework,Version=v4.8::MarsRoverKata.test.RobotShould&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::536BB77C-BC05-4D58-978D-FAA7FF151129::.NETFramework,Version=v4.8::PasswordValidator.PasswordValidatorShould&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::536BB77C-BC05-4D58-978D-FAA7FF151129::.NETFramework,Version=v4.8::PasswordValidator.test.PasswordValidatorShould&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

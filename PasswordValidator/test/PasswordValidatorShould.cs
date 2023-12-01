@@ -8,7 +8,7 @@ namespace PasswordValidator.test
         [Fact]
         public void ValidateThatPasswordIsStrongEnough()
         {
-            PasswordValidator.IsStrongPassword("Ola_k_as3").Should().BeTrue();
+            PasswordValidator.IsStrongPassword("Abcd1234").Should().BeTrue();
         }
         
         [Fact]
@@ -20,7 +20,13 @@ namespace PasswordValidator.test
         [Fact]
         public void ValidateThatPasswordHasNotAnUppercaseLetter()
         {
-            PasswordValidator.IsStrongPassword("ola_k_as3").Should().BeFalse();
+            PasswordValidator.IsStrongPassword("abcd1234").Should().BeFalse();
+        }
+
+        [Fact]
+        public void ValidateThatPasswordHasNotALowercaseLetter()
+        {
+            PasswordValidator.IsStrongPassword("ABCD1234").Should().BeFalse();
         }
     }
 }
