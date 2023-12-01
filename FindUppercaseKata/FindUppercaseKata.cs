@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace FindUppercaseKata
 {
-    public static class KataFindUppercase
+    public static class FindUppercaseKata
     {
         public static List<int> Execute(string text)
         {
-            List<int> indexes = new List<int>();
-            for (int i = 0; i < text.Length; i++)
+            var indexes = new List<int>();
+            for (var indexPosition = 0; indexPosition < text.Length; indexPosition++)
             {
-                if (Char.IsUpper(text[i]))
+                if (char.IsUpper(text[indexPosition]))
                 {
-                    indexes.Add(i);
+                    indexes.Add(indexPosition);
                 }
             }
 
