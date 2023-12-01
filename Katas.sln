@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordValidator", "Passwo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpKata", "SignUpKata\SignUpKata.csproj", "{31A18248-49F8-4E4D-8538-7301D58F9E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeFactorsKata", "PrimeFactorsKata\PrimeFactorsKata.csproj", "{47358995-577C-455F-B895-8E9C5565F061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{31A18248-49F8-4E4D-8538-7301D58F9E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31A18248-49F8-4E4D-8538-7301D58F9E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31A18248-49F8-4E4D-8538-7301D58F9E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47358995-577C-455F-B895-8E9C5565F061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47358995-577C-455F-B895-8E9C5565F061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47358995-577C-455F-B895-8E9C5565F061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47358995-577C-455F-B895-8E9C5565F061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
