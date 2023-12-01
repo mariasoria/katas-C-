@@ -1,0 +1,30 @@
+# IDEs
+.idea/
+
+# JetBrains Rider
+*.sln.iml
+
+# Macos files
+.DS_Store
+
+# Build results
+bin/
+obj/
+debug/
+release/
+packages/build/
+log/
+*.log
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
