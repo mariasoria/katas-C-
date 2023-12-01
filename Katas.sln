@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpKata", "SignUpKata\Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeFactorsKata", "PrimeFactorsKata\PrimeFactorsKata.csproj", "{47358995-577C-455F-B895-8E9C5565F061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindUppercaseKata", "FindUppercaseKata\FindUppercaseKata.csproj", "{2EB5505B-9878-4AB6-BA36-69FF3AE862E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{47358995-577C-455F-B895-8E9C5565F061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47358995-577C-455F-B895-8E9C5565F061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47358995-577C-455F-B895-8E9C5565F061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB5505B-9878-4AB6-BA36-69FF3AE862E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB5505B-9878-4AB6-BA36-69FF3AE862E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB5505B-9878-4AB6-BA36-69FF3AE862E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB5505B-9878-4AB6-BA36-69FF3AE862E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
