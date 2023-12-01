@@ -3,6 +3,7 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::67CBC463-DD4D-4E79-A6C0-E4CCE27D95AA::.NETFramework,Version=v4.8::MarsRoverKata.test.RobotShould&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::536BB77C-BC05-4D58-978D-FAA7FF151129::.NETFramework,Version=v4.8::PasswordValidator.PasswordValidatorShould&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::536BB77C-BC05-4D58-978D-FAA7FF151129::.NETFramework,Version=v4.8::PasswordValidator.test.PasswordValidatorShould&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>
